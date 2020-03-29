@@ -6,17 +6,10 @@ on:
        - master
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Discord notification
+      uses: Ilshidur/action-discord@master
       env:
         DISCORD_WEBHOOK: https://discordapp.com/api/webhooks/693742188294570016/_W2waVlXYMM453DzN9HGulI3jMDjAkrGcT1vp_SLXQszVmbjDzdTzIqjJouWNCQQGjqz
-      uses: Ilshidur/action-discord@master
-      with:
-        args: 'New {{ GITHUB_ACTION }} to CarcamoD/testActions.'
-    - name: Discord notification
-      env:
-        DISCORD_WEBHOOK: https://discordapp.com/api/webhooks/693742188294570016/_W2waVlXYMM453DzN9HGulI3jMDjAkrGcT1vp_SLXQszVmbjDzdTzIqjJouWNCQQGjqz
-      uses: Ilshidur/action-discord@master
