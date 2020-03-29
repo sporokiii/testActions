@@ -8,7 +8,7 @@ public class TestactionsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TestactionsApplication.class, args);
-        System.out.println("Test github action on push D");
+        System.out.println("Pull request test");
     }
 
 }
