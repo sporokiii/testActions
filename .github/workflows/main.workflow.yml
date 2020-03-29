@@ -1,1 +1,22 @@
+name: Test Actions
 
+on: 
+  push:
+    branches: 
+      - test    
+  pull_request:
+     branches: 
+       - master
+jobs:
+  test:
+    runs-on: [ubuntu-latest]
+    name: Test Discord Action
+    
+    steps:
+    - name: Actions for Discord
+    - uses: Ilshidur/action-discord@0.0.2
+      env:
+       DISCORD_WEBHOOK: https://discordapp.com/api/webhooks/693742188294570016/_W2waVlXYMM453DzN9HGulI3jMDjAkrGcT1vp_SLXQszVmbjDzdTzIqjJouWNCQQGjqz
+       DISCORD_USERNAME: Git Bot
+      with:
+        args: 'The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed.' 
