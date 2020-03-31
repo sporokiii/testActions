@@ -14,5 +14,9 @@ jobs:
     steps:
     - name: Discord notification
       uses: Ilshidur/action-discord@master
+      with:
+        args: '{{ EVENT_PAYLOAD.pull_request.id }}'
       env:
         DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}}
+        DISCORD_USERNAME: Notifyer
+        DISCORD_AVATAR: https://www.beahero.gg/wp-content/uploads/2019/06/nanatsu-no-taizai-anuncia-que-tendra-un-nuevo-proyecto-animado.jpg
