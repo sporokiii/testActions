@@ -4,18 +4,18 @@ on:
   pull_request:
      branches: 
       - master
-  push:
-     branches: 
-      - test       
+#   push:
+#      branches: 
+#       - test       
 jobs:
   build:
     runs-on: ubuntu-latest
     
     steps:
     - name: Discord notification
-      uses: Ilshidur/action-discord@master
+      uses: Ilshidur/action-discord@master 
       with:
-        args: '{{ EVENT_PAYLOAD.pull_request.id }}'
+        args: 'New pull request from : {{ EVENT_PAYLOAD.pull_request.user.login }}, {{ EVENT_PAYLOAD.pull_request.body }}  URL:{{ EVENT_PAYLOAD.pull_request.html_url }} to Master'
       env:
         DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}}
         DISCORD_USERNAME: Notifyer
