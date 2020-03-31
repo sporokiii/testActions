@@ -1,19 +1,17 @@
-# This workflow will triage pull requests and apply a label based on the
-# paths that are modified in the pull request.
-#
-# To use this workflow, you will need to set up a .github/labeler.yml
-# file with configuration.  For more information, see:
-# https://github.com/actions/labeler/blob/master/README.md
+name: labeler
 
-name: Labeler
-on: [pull_request]
+on: pull_request
 
 jobs:
-  label:
-
+  labeler:
     runs-on: ubuntu-latest
-
+    name: Label the PR size
     steps:
-    - uses: actions/labeler@v2
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: codelytv/pr-size-labeler@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.token }}
+          xs_max_size: '1'
+          s_max_size: '2'
+          m_max_size: '3'
+          l_max_size: '5'
+          fail_if_xl: 'false'
