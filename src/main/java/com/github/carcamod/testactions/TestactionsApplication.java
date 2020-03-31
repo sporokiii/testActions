@@ -8,7 +8,7 @@ public class TestactionsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TestactionsApplication.class, args);
-        System.out.println("Pull request testt");
+        System.out.println("Push test ");
     }
 
 }
