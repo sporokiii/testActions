@@ -1,10 +1,1 @@
-# testActions
-tEST
-tEST
-tEST
-tEST
-tEST
-tEST
-tEST
-tEST
-tEST
+https://developer.github.com/v3/activity/events/types/
