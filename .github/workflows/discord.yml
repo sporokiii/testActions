@@ -18,5 +18,5 @@ jobs:
         args: "{{ EVENT_PAYLOAD.pull_request.user.login }}: t'he assignat de reviewer en un PR.  {{ EVENT_PAYLOAD.pull_request.url }} "
       env:
         DISCORD_WEBHOOK: ${{secrets.ASD_WEBHOOK}}
-        DISCORD_USERNAME: "{{ EVENT_PAYLOAD.pull_request.user.login }}"
-        DISCORD_AVATAR: "{{ EVENT_PAYLOAD.pull_request.user.avatar_url }}"
+        DISCORD_USERNAME: ${{ EVENT_PAYLOAD.pull_request.user.login }}
+        DISCORD_AVATAR: ${{ EVENT_PAYLOAD.pull_request.user.avatar_url }}
