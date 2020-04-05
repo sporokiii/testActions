@@ -13,9 +13,7 @@ jobs:
     
     steps:
     - name: Discord notification
-      uses: sporokiii/action-discord@master 
-      with:
-        args: "HEHE"
+      uses: sporokiii/action-discord@master
     env:
         DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}}
         DISCORD_USERNAME: PROVA
