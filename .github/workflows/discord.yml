@@ -17,7 +17,7 @@ jobs:
       with:
         args: '/tts subnormal'
       env:
-        DISCORD_WEBHOOK: ${{secrets.ASD_WEBHOOK}}
+        DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}}
         DISCORD_USERNAME: Maestro de las sobras
         DISCORD_AVATAR: https://i.pinimg.com/originals/b9/e2/3b/b9e23b3e6885bbe0e7e86a0cc1f0eea1.png
 #env:
