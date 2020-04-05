@@ -15,8 +15,8 @@ jobs:
     - name: Discord notification
       uses: Ilshidur/action-discord@master 
       with:
-        args: "${{ pull_request.user.login }}: he assignat de reviewer en un PR. ${{ pull_request.url }} "
+        args: "$pull_request.user.login : he assignat de reviewer en un PR. $pull_request.url "
     env:
         DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}}
-        DISCORD_USERNAME: ${{ pull_request.user.login }}
-        DISCORD_AVATAR: ${{ pull_request.user.avatar_url }}
+        DISCORD_USERNAME: $pull_request.user.login
+        DISCORD_AVATAR: $pull_request.user.avatar_url
