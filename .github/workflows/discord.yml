@@ -13,7 +13,7 @@ jobs:
     
     steps:
     - name: Discord notification
-      uses: sporokiii/action-discord@master
+      uses: Ilshidur/action-discord@master
       with:
           args: "{{ EVENT_PAYLOAD.pull_request.user.login }}: he assignat de reviewer en un PR. {{ pull_request.url }} "
     env:
